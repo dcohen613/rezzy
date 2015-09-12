@@ -1,0 +1,48 @@
+main {
+    height: 100vh;
+    
+}
+
+.reservation-list {
+	height: 100%;
+}
+
+.reservation-list-container {
+	height: 85vh;
+	padding: 10px 15px 10px 15px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	border-bottom: solid 2px;
+}
+
+.reservation {
+	width: 100%;
+	border: solid;
+	border-width: 1px 1px 1px 1px;
+	padding: 5px 5px 5px 5px;
+	margin: 0 0 5px 0;
+}
+
+.ui-left {
+	width: 20vw;
+	height: 100%;
+	/* background-color: rgb(108,180,45);
+	color: black; */
+	background-color: black;
+	color: rgb(220,220,220);
+	margin: 0 0 0 0;
+}
+.container-main {
+	height: 100%;
+	background-color: black;
+}
+
+.btn-container {
+	padding: 10px 10px 10px 10px;
+}
+
+#add-res-btn {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}

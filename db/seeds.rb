@@ -6,6 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-for i in 0..200
-	Reservation.create(name: Faker::Name.name, phone: Faker::PhoneNumber.phone_number, party_size: Faker::Number.between(1, 10), time_stamp: Faker::Time.forward)
+for i in 0..100
+	Reservation.create(name: Faker::Name.name, phone: Faker::PhoneNumber.phone_number, party_size: Faker::Number.between(1, 10), time_stamp: Faker::Time.between(DateTime.now, DateTime.now + 3))
 end

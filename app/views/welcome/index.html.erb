@@ -1,0 +1,22 @@
+<main>
+	<div class="container-main">
+		<div class="ui-left"> 
+			<div class="reservation-list-container">
+				<div class="reservation-list">
+					<% @reservations.order('time_stamp ASC').each do |reservation| %>
+				        <% if reservation.time_stamp > DateTime.now && reservation.time_stamp < @today %>
+						<div class="reservation">
+				        <%= reservation.name %> <br>
+				        <%= reservation.party_size %> <br>
+				        <%= reservation.time_stamp %> <br>
+				        </div>
+				        <% end %>
+				    <% end %>
+				</div>
+			</div>
+			<div class="btn-container">
+				<a href="#" class="btn btn-primary btn-lg" id="add-res-btn"> Add Reservation </a>
+			</div>
+		</div>
+	</div>
+</main>
