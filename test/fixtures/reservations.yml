@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  phone: MyString
+  party_size: 1
+  time_stamp: 2015-09-11 20:45:19
+
+two:
+  name: MyString
+  phone: MyString
+  party_size: 1
+  time_stamp: 2015-09-11 20:45:19

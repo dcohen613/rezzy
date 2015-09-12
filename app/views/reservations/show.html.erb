@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reservation.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @reservation.phone %>
+</p>
+
+<p>
+  <strong>Party size:</strong>
+  <%= @reservation.party_size %>
+</p>
+
+<p>
+  <strong>Time stamp:</strong>
+  <%= @reservation.time_stamp %>
+</p>
+
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<%= link_to 'Back', reservations_path %>
