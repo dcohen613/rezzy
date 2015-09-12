@@ -1,11 +1,11 @@
 <main>
 	<div class="container-main">
-		<div class="ui-left"> 
+		<div class="ui-left col-xs-2"> 
 			<div class="reservation-list-container">
 				<div class="reservation-list">
 					<% @reservations.order('time_stamp ASC').each do |reservation| %>
 				        <% if reservation.time_stamp > DateTime.now && reservation.time_stamp < @today %>
-						<div class="reservation">
+						<div class="reservation" draggable="true" ondragstart="drag(event)">
 				        <%= reservation.name %> <br>
 				        <%= reservation.party_size %> <br>
 				        <%= reservation.time_stamp %> <br>
@@ -16,6 +16,22 @@
 			</div>
 			<div class="btn-container">
 				<a href="#" class="btn btn-primary btn-lg" id="add-res-btn"> Add Reservation </a>
+			</div>
+		</div>
+		<div class="ui-right col-xs-10">
+			<div class="row">
+				<div class="col-xs-1" id ="first" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
+			<!--	<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
+				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
+				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
+				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
+				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
+				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
+				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
+				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
+				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
+				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
+				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div> -->
 			</div>
 		</div>
 	</div>
