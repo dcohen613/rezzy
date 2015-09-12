@@ -24,19 +24,12 @@ main {
 }
 
 .ui-left {
+	width: 20vw;
 	height: 100%;
 	/* background-color: rgb(108,180,45);
 	color: black; */
 	background-color: black;
 	color: rgb(220,220,220);
-	margin: 0 0 0 0;
-}
-
-.ui-right {
-	height: 100%;
-	background-color: black;
-	color: rgb(220,220,220);
-	padding: 10px 15px 10px 15px;
 	margin: 0 0 0 0;
 }
 .container-main {
@@ -48,16 +41,20 @@ main {
 	padding: 10px 10px 10px 10px;
 }
 
-.btn-container a:visited {
-	color: #fff;
-}
-
 #add-res-btn {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
-
 .col-xs-1{
+		width: 100%;
 	border: solid;
+	border-width: 1px 1px 1px 1px;
+	padding: 5px 5px 5px 5px;
+	}
+
+.stackDrop1{
+    min-height:100px;
+    padding: 15px;
+    background-color: white;
 }

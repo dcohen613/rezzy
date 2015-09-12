@@ -12,10 +12,9 @@
 //
 //= require jquery/dist/jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
 //= require bootstrap/dist/js/bootstrap
 //= require custom
 //= require datetime
 //= require_tree .
-
-
