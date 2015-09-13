@@ -68,6 +68,13 @@ jQuery(document).ready(function ($) {
     	accept: "#draggable",
     	drop:function(e, ui) {
         	$(e.target).append($(ui.draggable).detach().css({'top':'', 'left':''}));
+    	},
+    		over:function(e, ui){
+    		$(e.target).css("background-Color","rgb(83,204,245)");
+    	},
+    	out:function(e, ui){
+    		$(e.target).css("background-Color","black");
     	}
+    
 	});
  });
