@@ -17,4 +17,5 @@
 //= require bootstrap/dist/js/bootstrap
 //= require custom
 //= require datetime
+//= require uitouch
 //= require_tree .

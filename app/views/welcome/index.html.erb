@@ -2,10 +2,11 @@
 	<div class="container-main">
 		<div class="ui-left col-xs-2"> 
 			<div class="reservation-list-container">
-				<div class="reservation-list">
+				<div class="reservation-list" id="droppable">
+					
 					<% @reservations.order('time_stamp ASC').each do |reservation| %>
 				        <% if reservation.time_stamp > DateTime.now && reservation.time_stamp < @today %>
-						<div class="reservation">
+						<div class="reservation" id="draggable">
 				        <%= reservation.name %> <br>
 				        <%= reservation.party_size %> <br>
 				        <%= reservation.time_stamp %> <br>
@@ -14,25 +15,31 @@
 				    <% end %>
 				</div>
 			</div>
-			<img id="pic" src="/assets/samon.jpeg">
+			<!-- <img id="pic" src="/assets/samon.jpeg"> -->
 			<div class="btn-container">
 				<a href="#" class="btn btn-primary btn-lg" id="add-res-btn"> Add Reservation </a>
 			</div>
 		</div>
 		<div class="ui-right col-xs-10">
 			<div class="row">
-				<div class="col-xs-1" id ="first">.col-xs-1</div>
-			<!--	<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
-				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
-				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
-				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
-				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
-				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
-				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
-				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
-				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
-				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div>
-				<div class="col-xs-1" ondrop="drop(event)" ondragover="allowDrop(event)">.col-xs-1</div> -->
+				<div class="col-xs-3 tabletop" id ="tabletop">table 1</div>
+				<div class="col-xs-3 tabletop" id ="tabletop">table 2</div>
+				<div class="col-xs-3 tabletop" id ="tabletop">table 3</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3 tabletop" id ="tabletop">table 4</div>
+				<div class="col-xs-3 tabletop" id ="tabletop">table 5</div>
+				<div class="col-xs-3 tabletop" id ="tabletop">table 6</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3 tabletop" id ="tabletop">table 7</div>
+				<div class="col-xs-3 tabletop" id ="tabletop">table 8</div>
+				<div class="col-xs-3 tabletop" id ="tabletop">table 9</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3 tabletop" id ="tabletop">table 10</div>
+				<div class="col-xs-3 tabletop" id ="tabletop">table 11</div>
+				<div class="col-xs-3 tabletop" id ="tabletop">table 12</div>
 			</div>
 		</div>
 	</div>

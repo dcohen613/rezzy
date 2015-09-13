@@ -1,30 +1,4 @@
 
- $(document).ready(function ($)  {
-
-
-    $(".reservation").draggable({
-    	appendTo: "body",
-    	cursor: "move",
-    	helper: 'clone',
-    	revert: "invalid"
-			});
-    $("#pic").draggable({
-    		appendTo: "body",
-    	cursor: "move",
-    	helper: 'clone',
-    	revert: "invalid"
-			
-    });
-    $(".col-xs-1").droppable({  
-      tolerance: "intersect",
-    	accept: ".reservation",
-    	activeClass: "ui-state-default",
-    	hoverClass: "ui-state-hover",
-    	drop: function(event, ui) {        
-        	$(this).append($(ui));
-    				}
-			});
- 		 });
 
  /*function allowDrop(ev) {
     ev.preventDefault();
@@ -74,3 +48,26 @@ jQuery(document).ready(function ($) {
 		}
 	});
 });
+
+ $(document).ready(function ($)  {
+
+    $(".reservation").draggable({
+    	cursor: "move",
+    	helper: 'clone',
+    	revert: "invalid"
+	});
+	$("#droppable").droppable({  
+        tolerance: "intersect",
+    	accept: "#draggable",
+    	drop:function(e, ui) {
+        	$(e.target).append($(ui.draggable).detach().css({'top':'', 'left':''}));
+    	}
+	});
+    $(".tabletop").droppable({  
+        tolerance: "intersect",
+    	accept: "#draggable",
+    	drop:function(e, ui) {
+        	$(e.target).append($(ui.draggable).detach().css({'top':'', 'left':''}));
+    	}
+	});
+ });
