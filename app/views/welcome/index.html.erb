@@ -3,7 +3,7 @@
 		<div class="ui-left col-xs-2"> 
 			<div class="reservation-list-container">
 				<div class="reservation-list" id="droppable">
-					
+
 					<% @reservations.order('time_stamp ASC').each do |reservation| %>
 				        <% if reservation.time_stamp > DateTime.now && reservation.time_stamp < @today %>
 						<div class="reservation" id="draggable">
@@ -17,7 +17,7 @@
 			</div>
 			<!-- <img id="pic" src="/assets/samon.jpeg"> -->
 			<div class="btn-container">
-				<a href="#" class="btn btn-primary btn-lg" id="add-res-btn"> Add Reservation </a>
+				<a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-lg"> Add Reservation </a>
 			</div>
 		</div>
 		<div class="ui-right col-xs-10">
@@ -43,4 +43,16 @@
 			</div>
 		</div>
 	</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document" style="width: 1050px !important; overflow: hidden;">
+    <div class="modal-content">
+      <div class="modal-body">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <iframe src="/reservations/new" width="1000" height="600" frameborder="0" ></iframe>
+
+      </div>
+
+    </div>
+  </div>
+</div>
 </main>
